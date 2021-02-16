@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #semantic UI Framework
 gem 'semantic-ui-sass'
+gem 'font-awesome-sass'
