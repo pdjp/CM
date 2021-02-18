@@ -7,7 +7,17 @@
   <div class="contain">
     <% @jackets.each do |jacket| %>
       <div class="jackets-index-item">
-        <%= link_to(jacket.content ,"/jackets/#{jacket.id}") %>
+      <div class="jacket-left">
+        <img src="<%= "/jacket_images/#{jacket.image}" %>">
+      </div>
+      <div class="jacket-right">
+      <%= link_to(jacket.content ,"/jackets/#{jacket.id}") %>
+      </div>
+      <%
+=begin%>
+ <%= jacket.color %> 
+<%
+=end%>
       </div>
     <% end %>
   </div>

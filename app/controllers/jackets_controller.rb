@@ -9,7 +9,11 @@ class JacketsController < ApplicationController
     @jacket = Jacket.new
   end
   def create
-    @jacket = Jacket.new(content: params[:content])
+    @jacket = Jacket.new(
+      content: params[:content],
+      # color: params[:color],
+      image: "default_jackets.jpg"
+    )
     if @jacket.save
       flash[:notice] = "作成しました"
       redirect_to("/jackets/index")
@@ -23,6 +27,11 @@ class JacketsController < ApplicationController
   def update
     @jacket = Jacket.find_by(id: params[:id])
     @jacket.content = params[:content]
+    if params[:image]
+      @jacket.image = "#{@jacket.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/jacket_images/#{@jacket.image}", image.read)
+    end
     if @jacket.save
       flash[:notice] = "投稿を編集しました"
       redirect_to("/jackets/index")

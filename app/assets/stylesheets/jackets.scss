@@ -38,7 +38,25 @@
   margin-right: 5px;
   margin-bottom: 5px;
   background-color:#f0f3f5;
-  box-shadow: 0 2px 6px #c1ced7;
+}
+.jacket-left img {
+  padding-left: 65px;
+  padding-top: 5px;
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+}
+
+.jacket-left {
+  float: left;
+  width: 10%;
+}
+
+.jacket-right {
+  padding-top: 330px;
+  width: 90%;
+  padding-left: 25px;
+  text-align: center;
 }
 /* jackets/new ================================ */
 .jackets-new textarea {
@@ -62,6 +80,13 @@
   background-size: cover;
   background-image: url("/posts.index.jpg");
 }
+.show_jacket-left img {
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+}
 .jackets-show form {
   display: inline;
 }
@@ -75,18 +100,14 @@
   box-shadow: 0 2px 6px #c1ced7;
 }
 
-.jackets-show-item .post-user-name a {
-  vertical-align: middle;
-  font-size: 24px;
-  margin-left: 15px;
-}
-
 .jackets-show-item p {
   font-size: 24px;
   margin: 20px 0;
 }
 
 .jacket-menus {
+  padding-top: 40px;
+  letter-spacing: 6px;
   float: right;
 }
 
