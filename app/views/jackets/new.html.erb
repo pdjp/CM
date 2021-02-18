@@ -1,0 +1,18 @@
+<div class="main jackets-new">
+  <div class="container">
+    <h1 class="form-heading">追加する</h1>
+    <%= form_tag("/jackets/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @jacket.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <textarea name="content"><%= @jacket.content %></textarea>
+          <input type="submit" value="追加">
+        </div>
+      </div>
+    <% end %>  
+  </div>
+</div>

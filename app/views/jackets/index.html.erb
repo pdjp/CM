@@ -1,0 +1,14 @@
+<div class="main jackets-index">
+  <div class="sinnki">
+      <%=link_to("/jackets/new") do %>
+    <button class="btn">追加</button>
+  <%end%>
+  </div>
+  <div class="contain">
+    <% @jackets.each do |jacket| %>
+      <div class="jackets-index-item">
+        <%= link_to(jacket.content ,"/jackets/#{jacket.id}") %>
+      </div>
+    <% end %>
+  </div>
+</div>
