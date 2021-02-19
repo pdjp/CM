@@ -9,8 +9,14 @@
               <%= message %>
             </div>
           <% end %>
+        <p>画像の変更</p>
         <input name="image" type="file">
+        <p>ブランドの変更</p>
         <textarea name="content"><%= @jacket.content %></textarea>
+        <p>色の変更</p>
+        <textarea name="color"><%= @jacket.color %></textarea>
+        <p>サイズの変更</p>
+        <textarea name="size"><%= @jacket.size %></textarea>
         <input type="submit" value="保存">
       </div>
     </div>

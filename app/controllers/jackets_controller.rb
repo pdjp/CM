@@ -11,7 +11,8 @@ class JacketsController < ApplicationController
   def create
     @jacket = Jacket.new(
       content: params[:content],
-      # color: params[:color],
+      color: params[:color],
+      size: params[:size],
       image: "default_jackets.jpg"
     )
     if @jacket.save
@@ -27,6 +28,8 @@ class JacketsController < ApplicationController
   def update
     @jacket = Jacket.find_by(id: params[:id])
     @jacket.content = params[:content]
+    @jacket.color = params[:color]
+    @jacket.size = params[:size]
     if params[:image]
       @jacket.image = "#{@jacket.id}.jpg"
       image = params[:image]

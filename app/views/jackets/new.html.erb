@@ -9,13 +9,12 @@
               <%= message %>
             </div>
           <% end %>
-          <input name="image" type="file">
+          <p>ブランド</p>
           <textarea name="content"><%= @jacket.content %></textarea>
-         <%
-=begin%>
- <textarea name="color"><%= @jacket.color %></textarea> 
-<%
-=end%>
+          <p>色</p>
+          <textarea name="color"><%= @jacket.color %></textarea>
+          <p>サイズ</p>
+          <textarea name="size"><%= @jacket.size %></textarea>
           <input type="submit" value="追加">
         </div>
       </div>
