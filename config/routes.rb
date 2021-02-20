@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'shoes/index' => 'shoes#index'
+  get 'shoes/new' => 'shoes#new' 
+  get 'shoes/:id' => 'shoes#show'
+  post 'shoes/create' => 'shoes#create'
+  get 'shoes/:id/edit' => 'shoes#edit'
+  post 'shoes/:id/update' => 'shoes#update'
+  post 'shoes/:id/destroy' => "shoes#destroy"
+
   get 'pants/index' => 'pants#index'
   get 'pants/new' => 'pants#new' 
   get 'pants/:id' => 'pants#show'
