@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  post "logout" => "users#logout"
+  
   get 'shoes/index' => 'shoes#index'
   get 'shoes/new' => 'shoes#new' 
   get 'shoes/:id' => 'shoes#show'

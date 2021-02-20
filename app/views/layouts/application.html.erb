@@ -17,6 +17,7 @@
         <%= link_to("CM", "/") %>
       </div>
       <ul class="header-menus">
+      <% if session[:user_id] %>
         <li>
         <%= link_to("Jackets","/jackets/index") %>
         </li>
@@ -32,6 +33,13 @@
         <li>
         <%= link_to("Shoes","/shoes/index") %>
         </li>
+        <li>
+        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+        </li>
+        <% else %>
+        <li>
+        <%= link_to("ログイン", "/login") %>
+        </li>
         <%
 =begin%>
  <li>
@@ -39,6 +47,7 @@
         </li> 
 <%
 =end%>
+      <% end %>
       </ul>
     </header>
 
